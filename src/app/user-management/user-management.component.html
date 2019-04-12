@@ -1,0 +1,52 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <button mat-raised-button (click)="DeleteUsers()" class="btn btn-danger pull-right">
+          Delete</button>
+        <button mat-raised-button (click)="AddUser()" class="btn btn-info pull-right">{{btnText}}</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Users</h4>
+            <p class="card-category"> Registered users of Coins application</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                  <th></th>
+                  <th> ID </th>
+                  <th> Name </th>
+                  <th> Email </th>
+                  <th> Contact# </th>
+                  <th> ModifiedOn </th>
+                  <th> Status </th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of Users;let i = index">
+                    <td>
+                      <mat-checkbox (change)="OnRowSelect($event,user.Id)"></mat-checkbox>
+                    </td>
+                    <td> {{i+1}} </td>
+                    <td> {{user.FirstName + " " + user.LastName}} </td>
+                    <td> {{user.Email}} </td>
+                    <td> {{user.ContactNumber}} </td>
+                    <td> {{user.CreatedOn | date: 'shortDate'}} </td>
+                    <td> Active </td>
+                  </tr>
+                </tbody>
+              </table>
+              <mat-paginator [length]="totalRecords" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+              </mat-paginator>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

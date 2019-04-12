@@ -1,0 +1,45 @@
+<div class="main-panel mx-width">
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row"></div>
+      <div class="row">
+        <div class="col-md-4 col-sm-12 col-xs-12"></div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <div class="card card-profile">
+            <div class="card-avatar">
+              <a href="#">
+                <img class="img" src="./assets/img/coins_logo.jpg" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h6 class="card-category text-gray">Coins Admin Portal</h6>
+              <h4 class="card-title">Saves your pocket</h4>
+              <div class="card-description">
+                <form>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Enter username" required autocomplete="off"/>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Enter password" type="password" required autocomplete="off" />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <a href="javascript:void(0)" class="btn btn-success btn-round" (click)="OnLogin()">Login</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12"></div>
+      </div>
+    </div>
+  </div>
+</div>
